@@ -1,0 +1,128 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
+}
+
+.gameboard {
+  display: flex;
+  position: relative;
+  box-shadow: 0px 3rem 10rem rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+}
+
+.player {
+  text-align: center;
+  padding: 5rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  transition: all 0.5s;
+}
+.player:first-of-type {
+  border-radius: 10px 0px 0px 10px;
+}
+.player__title {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.player__score {
+  font-size: 4rem;
+  color: #c7365f;
+  margin-top: 10px;
+}
+.player__current {
+  margin-top: 100px;
+}
+
+.player--active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.player--winner {
+  background-color: #F9DC5C;
+}
+
+/* Estilização da posição dos botões do jogo*/
+.dice {
+  display: none;
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  top: 26%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 0.5rem 3rem rgba(0, 0, 0, 0.295);
+}
+
+.dice, .btn--newgame, .btn--dice, .btn--hold {
+  position: absolute;
+  z-index: 1;
+}
+
+.btn--newgame {
+  top: 6%;
+}
+.btn--dice {
+  top: 65%;
+}
+.btn--hold {
+  top: 76%;
+}
+
+.current {
+  background-color: #c7365f;
+  padding: 15px 0px;
+  border-radius: 5px;
+  width: 170px;
+}
+.current__title {
+  font-size: 1rem;
+  color: #ddd;
+}
+.current__score {
+  font-size: 1.8rem;
+  color: white;
+  margin-top: 10px;
+}
+
+.btn {
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  color: #444;
+  border: none;
+  font-weight: 600;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+  box-shadow: 0 0.1rem 5rem rgba(0, 0, 0, 0.308);
+  transition: 0.5s;
+}
+.btn:active {
+  box-shadow: 0 -1rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translate(-50%, 6px);
+}
+
+/*# sourceMappingURL=pigGame.css.map */
