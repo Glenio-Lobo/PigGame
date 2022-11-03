@@ -3,7 +3,7 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import dice from './imageBundle.js'; //Conjunto de dices para funcionar com o budling do parcel.
 
-/* Poderia usar também goble, /assets/*.png . Porém cria um objetor contendo todos os paths necessários.*/
+/* Poderia usar também goble, /assets/*.png . Cria um objeto contendo todos os paths necessários.*/
 //Jogador Um
 let playerOne = document.querySelector('.player--0');
 let playerOneScore = document.querySelector('.player-0--score');
